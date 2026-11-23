@@ -6,6 +6,7 @@ import '../../core/connectivity/connectivity_cubit.dart';
 import '../../core/router/routes.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/view_state.dart';
+import '../../core/widgets/fade_up.dart';
 import '../../core/widgets/meal_card.dart';
 import '../../core/widgets/states.dart';
 import '../../domain/repositories/repositories.dart';
@@ -93,9 +94,12 @@ class _MealListView extends StatelessWidget {
                     itemCount: meals.length,
                     separatorBuilder: (_, _) =>
                         const SizedBox(height: AppSpacing.md),
-                    itemBuilder: (context, i) => MealCard(
-                      meal: meals[i],
-                      onTap: () => context.push(Routes.mealPath(meals[i].id)),
+                    itemBuilder: (context, i) => FadeUp(
+                      delay: Duration(milliseconds: 40 * (i % 6)),
+                      child: MealCard(
+                        meal: meals[i],
+                        onTap: () => context.push(Routes.mealPath(meals[i].id)),
+                      ),
                     ),
                   );
                 }(),

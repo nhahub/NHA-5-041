@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../core/router/routes.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/view_state.dart';
+import '../../core/widgets/fade_up.dart';
 import '../../core/widgets/meal_card.dart';
 import '../../core/widgets/states.dart';
 import '../../domain/models/meal.dart';
@@ -103,14 +104,17 @@ class _FavoritesList extends StatelessWidget {
               color: Theme.of(context).colorScheme.onErrorContainer,
             ),
           ),
-          child: MealCard(
-            meal: meal.toSummary(),
-            fullMeal: meal,
-            subtitle: [
-              meal.category,
-              meal.area,
-            ].where((s) => s.isNotEmpty).join(' · '),
-            onTap: () => context.push(Routes.mealPath(meal.id)),
+          child: FadeUp(
+            delay: Duration(milliseconds: 40 * (i % 6)),
+            child: MealCard(
+              meal: meal.toSummary(),
+              fullMeal: meal,
+              subtitle: [
+                meal.category,
+                meal.area,
+              ].where((s) => s.isNotEmpty).join(' · '),
+              onTap: () => context.push(Routes.mealPath(meal.id)),
+            ),
           ),
         );
       },
