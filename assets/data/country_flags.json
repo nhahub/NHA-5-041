@@ -1,0 +1,12 @@
+{
+  "Algerian": "DZ", "Australian": "AU", "Canadian": "CA", "Chinese": "CN",
+  "Croatian": "HR", "Egyptian": "EG", "Greek": "GR", "Irish": "IE",
+  "Italian": "IT", "Jamaican": "JM", "Japanese": "JP", "Kenyan": "KE",
+  "Malaysian": "MY", "Mexican": "MX", "Moroccan": "MA", "Filipino": "PH",
+  "Polish": "PL", "Portuguese": "PT", "Russian": "RU", "Saudi Arabian": "SA",
+  "Spanish": "ES", "Syrian": "SY", "Thai": "TH", "Tunisian": "TN",
+  "Turkish": "TR", "Ukrainian": "UA", "British": "GB", "Uruguayan": "UY",
+  "Vietnamese": "VN", "American": "US", "French": "FR", "Indian": "IN",
+  "Dutch": "NL", "Norwegian": "NO", "Argentinian": "AR", "Venezulan": "VE",
+  "Slovakian": "SK", "Unknown": ""
+}
